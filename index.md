@@ -212,9 +212,11 @@ There's risks here though - a tool located at `Meross/wifi` will dump the ESSID,
 
 ![alt text](settings.png "Meross/wifi")
 
-There's also what appears to be part of a web-based admin interface exposed, though this doesn't appear to be documented anywhere.  Changing a password here does appear to change the Telnet password, though it would be nice if Meross advertised this functionality if it worked fully, allowing users to change the password to their device (or enable/disable Telnet).
+There's also what appears to be part of a web-based admin interface exposed (`admin.htm`), though this doesn't appear to be documented anywhere.  Changing a password here does appear to change the Telnet password, though it would be nice if Meross advertised this functionality if it worked fully, allowing users to change the password to their device (or enable/disable Telnet).
 
-TODO: Add Photo
+### UPDATE as of 4/28/2018, firmware version 1.1.24
+
+The telnet behavior described above was current as of firmware version 1.1.18, but appears to have been disabled in 1.1.24.  However, the `admin.htm` administrative interface is still exposed and unauthenticated as of 1.1.24.
 
 ### Future work:
 * Explore exposed shell, filesystem
