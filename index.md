@@ -228,4 +228,6 @@ The telnet behavior described above was current as of firmware version 1.1.18, b
 
 Unlike another [device I've looked at](https://nvd.nist.gov/vuln/detail/CVE-2016-5650), the MSS110 appears to only connect to networks matching the WPA2 security settings of networks it knows.  Other devices show this "fail open" behavior, which is incredibly dangerous when combined with a hardcoded root password.
 
-Interestingly enough, my [ecobee 4](https://www.ecobee.com/) doesn't do well at this - it will connect to a network with matching ESSID, but mismatched security settings.
+Interestingly enough, my [ecobee 4](https://www.ecobee.com/) doesn't do well at this - it will connect to a network with matching ESSID, but mismatched security settings.  This resulted in the issuance of CVE-2018-6402:
+
+```“Ecobee Ecobee4 4.2.0.171 devices can be forced to deauthenticate and connect to an unencrypted Wi-Fi network with the same SSID, even if the device settings specify use of encryption such as WPA2, as long as the competing network has a stronger signal. An attacker must be able to set up a nearby SSID, similar to an "Evil Twin" attack.”```
